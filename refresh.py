@@ -2,7 +2,7 @@ import requests
 import random
 
 # Replace with your blog or webpage URL
-url = "https://yourblog.blogspot.com"
+url = "https://viralcontenttt.blogspot.com/2025/03/viral-content.html"
 
 # Free public proxies (these change often)
 proxies = [
