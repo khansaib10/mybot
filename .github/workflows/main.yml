@@ -1,0 +1,24 @@
+name: Refresh Page Bot
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # runs every 1 minutes
+  workflow_dispatch:        # allows manual run
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Run refresher bot
+        run: python refresh.py
